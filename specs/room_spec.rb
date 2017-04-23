@@ -11,12 +11,11 @@ class TestRoom < Minitest::Test
     @customer2 = Customer.new("Mary", 50)
     @customer3 = Customer.new("Paddy", 100)
 
-    #customers = [@customer1, @customer2, @customer3]
 
-    @song1 = Songs.new("Eye of the Tiger")
-    @song2 = Songs.new("Song 2")
-    @song3 = Songs.new("Bohemian Rhapsody")
-    @song4 = Songs.new("Kiss From A Rose")
+    @song1 = Songs.new("Eye of the Tiger", "Survivor")
+    @song2 = Songs.new("Song 2", "Blur")
+    @song3 = Songs.new("Bohemian Rhapsody", "Queen")
+    @song4 = Songs.new("Kiss From A Rose", "Seal")
 
     @playlist = @song1, @song2, @song3
 
@@ -46,9 +45,5 @@ class TestRoom < Minitest::Test
     @room2.add_song_to_room(@song4)
     assert_equal(4, @room2.songs.size)
   end
-
-
-  
-
 
 end
